@@ -15,5 +15,5 @@ submitBtn.addEventListener("click", function calculateScore() {
     index++;
   }
 
-  output.innerText = "Yout score is" + score;
+  output.innerText = "Your score is " + score;
 });

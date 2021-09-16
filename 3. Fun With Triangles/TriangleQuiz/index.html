@@ -4,30 +4,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/main.css" />
   </head>
 
   <body>
-    <form class="quiz-form">
-      <div class="question-container">
-        <p>
-          What is the third triangle when angle1 = 45deg and angle2 = 45deg?
-        </p>
-        <label><input type="radio" name="question1" value="45" />45</label>
-        <label><input type="radio" name="question1" value="60" />60</label>
-        <label><input type="radio" name="question1" value="90" />90</label>
-      </div>
-      <div class="question-container">
-        <p>
-          What is the third triangle when angle1 = 50deg and angle2 = 50deg?
-        </p>
-        <label><input type="radio" name="question2" value="45" />45</label>
-        <label><input type="radio" name="question2" value="80" />80</label>
-        <label><input type="radio" name="question2" value="90" />90</label>
-      </div>
-    </form>
-    <button id="submit-ans-btn">Submit Answers</button>
-    <div id="output"></div>
+    <div class="container">
+      <form class="quiz-form">
+        <div class="question-container">
+          <p>
+            What is the third triangle when angle1 = 45deg and angle2 = 45deg?
+          </p>
+          <div class="options">
+            <label><input type="radio" name="question1" value="45" />45</label>
+            <label><input type="radio" name="question1" value="60" />60</label>
+            <label><input type="radio" name="question1" value="90" />90</label>
+          </div>
+        </div>
+        <div class="question-container">
+          <p>
+            What is the third triangle when angle1 = 50deg and angle2 = 50deg?
+          </p>
+          <div class="options">
+            <label><input type="radio" name="question2" value="45" />45</label>
+            <label><input type="radio" name="question2" value="80" />80</label>
+            <label><input type="radio" name="question2" value="90" />90</label>
+          </div>
+        </div>
+      </form>
+      <button id="submit-ans-btn">Submit Answers</button>
+      <div id="output"></div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
