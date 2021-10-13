@@ -1,7 +1,7 @@
-let add = "Shobhit"
-
-var person = {
-    first: add,
-    s: "add",
+function Zomato(DeliveryPerson) {
+  console.log("Shobhit Placed a order!");
+  DeliveryPerson();
 }
-//console.log(person.first)
+Zomato(function DeliveryPerson() {
+  console.log("Could you please deliver food?");
+});

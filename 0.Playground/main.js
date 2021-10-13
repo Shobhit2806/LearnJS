@@ -11,7 +11,7 @@ async function fetchStudentsData() {
   // pageArraySplit(data.data);
 
   pageArraySplit(data.data);
-
+  console.log(data.data);
   return data;
 }
 
@@ -44,5 +44,9 @@ var generateHTML = function (results) {
 
 // Another way without async await
 // fetch("https://reqres.in/api/users?page=2")
+//   .then(function (response) {
+//     console.log(response);
+//     return response;
+//   })
 //   .then((response) => response.json())
 //   .then((data) => console.log(data));
