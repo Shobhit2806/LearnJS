@@ -6,21 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
-
+  
   <body>
     Basics of webD
     <div>
-      <h1>Hey I am learning DOM</h1>
+      <!-- <h1>Hey I am learning DOM</h1>
       <p class="paraClass">Getting this element with querySelector, it will fect first element from document</p>
       <p class="detail">It wont fetch this p tag</p>
       <div class="content">
         Fetch element name from browser by right click in elements Tab
-      </div>
+      </div> -->
+      <script>
+        for (let i = 0; i < document.body.childNodes.length; i++) {
+          alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+          
+        }
+      </script>
       <div class ="deloitte">
         <h2>Great place to work, oh sorry no work is here..</h2>
         <p>Hashedin By Deloitte</p>
       </div>
     </div>
   </body>
-  <script src="main.js"></script>
+  
+  <!-- <script src="main.js"></script> -->
 </html>
