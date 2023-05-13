@@ -16,3 +16,6 @@ btn.addEventListener('click', e => {
   li.textContent = 'something new to do';
   ul.append(li)
 })
+
+// NOW THE LINE-THROUGH THING DOESN'T WORKING ON NEWLY ADDED CONTENT.LETS FIX THIS
+
