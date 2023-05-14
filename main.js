@@ -1,72 +1,36 @@
-const para = document.querySelector('p')
-console.log(para)
+// Usecase: I want to run function after 5sec but
+//without callback function if i do this first
+//completed will get printed that is why we need callback functions
 
-// Getting element via class name
-const detail = document.querySelector('.detail')
-console.log(detail)
+function doMyHomework(subject, callback) {
+  alert(`I need to do ${subject} homework`);
+  callback(subject);
+}
 
-// We can get the selector by inspecting an element in browser
-const inspectedSelectorName = document.querySelector('body > div:nth-child(1) > div:nth-child(4)')
-console.log(inspectedSelectorName)
+function doingMyHomework(subject, callback) {
+  alert(`I am doing ${subject} homework`);
+  setTimeout(()=>{callback(subject)},3000);
+}
 
-// Selecting multiple elements at once
-const paras = document.querySelectorAll('p')
-console.log(paras)
+// Now running callback function after your job is done is responsibility of doMyHomework function
+// Passing data,calling callback fn at right time is responsibility of doMyHomerwork fn it has nothing to do with
+// the calling of doMyHomework function.
+setTimeout(() => {
+  doMyHomework("Math", function (sub) {
+    doingMyHomework(sub, function (sub) {
+      doingMyHomework(sub, function (sub) {
+        alert(`Completed ${sub} homework`);
+      });
+    });
+  });
+}, 5000);
 
-const content = document.querySelector('.content')
-
-// ADD OR REMOVE PAGE CONTENT
-para.innerText = "This will replace the content";
-detail.innerText+= " This will append the content";
-
-paras.forEach(para=>{
-  console.log(para.innerText);
-  para.innerText+=' new text';
-
-})
-
-
-content.innerHTML+='<h2>This adds new element inside html tag</h2>'
-
-
-const people = ['mario','lugi','yoshi']
-people.forEach(person=>{
-  content.innerHTML += `${person} ` 
-})
+// This structure is known as Pyramid of Doom or Callback Hell
 
 
-// GET AND SET ATTRIBUTE
-console.log(para.getAttribute('class'))
-para.setAttribute('class','success')
-para.setAttribute('style','color:green;')
+//Inversion of Control:
 
-// Better way of styling as it wont overrride
-para.style.margin = '50px';
-
-
-// ADDING AND REMOVING CLASSES
-console.log(content.classList)
-content.classList.add('error')
-content.classList.add('erro2')
-content.classList.remove('erro2')
-
-
-// PARENT,CHILDREN,SIBLING
-const del = document.querySelector('.deloitte')
-console.log(del.children)
-
-// Convert HTML collection to array
-console.log(Array.from(del.children))
-
-Array.from(del.children).forEach(child=>{
-  child.classList.add('del-element')
-})
-
-console.log(del.parentElement);
-console.log(del.children)
-console.log(del.nextElementSibling);
-console.log(del.previousElementSibling);
-
-// Chaining
-
-console.log(del.previousElementSibling.parentElement);
+//We loose control of out programme because 
+//we pass that callback fn into another fn and now we have given 
+//the control of this fn to some other fn and we dont know whether 
+//that function will ever execute our callback fn or not.
