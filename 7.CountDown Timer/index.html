@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <span class="container__title">CountDown Timer</span>
+      <div class="container__lables">
+        <div class="container__lables-lable">Hours</div>
+        <div class="container__lables-lable">Minutes</div>
+        <div class="container__lables-lable">Seconds</div>
+      </div>
+      <div class="container__inputs">
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__input-time hour"
+        />
+        <p class="container__inputs-colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__input-time minute"
+        />
+        <p class="container__inputs-colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__input-time sec"
+        />
+        <p class="container__inputs-colon">:</p>
+      </div>
+      <div class="container__btns">
+        <button class="container_btn start">Start</button>
+        <button class="container_btn stop">Stop</button>
+        <button class="container_btn reset">Reset</button>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
