@@ -2,13 +2,31 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
+    <title>Quote Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
 
   <body>
-    Basics of webD
-  </body>
+    <div class="quote-container" id="quote-container" hidden="true">
+      <div class="quote-text" id="quoteText">
+        <i class="fa-sharp fa-solid fa-quote-left"></i> 
+      </div>
+      <div class="quote-author" id="quote-author"></div>
+      <div class="button-container">
+        <button class="twitter-link" id="twitter-icon">
+          <i class="fa-brands fa-twitter"></i>
+        </button>
+        <button class="new-quote-btn" id = "new-quote-btn">New Quote</button>
+      </div>
+    </div>
+    <div class="loader" id="loader"></div>
+  </body> 
   <script src="main.js"></script>
 </html>
