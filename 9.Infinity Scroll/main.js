@@ -23,7 +23,6 @@ function imageLoaded() {
   if (imagesLoaded === totalImages) {
     ready = true;
     loader.style.display='none'
-    console.log("ready", ready);
   }
 }
 
@@ -31,7 +30,8 @@ function imageLoaded() {
 function displayPhotos() {
   imagesLoaded = 0;
   totalImages = photosArray.length;
-  console.log("totalImages", totalImages);
+
+  
   photosArray.forEach((photo) => {
     // Create <a> to link to Unsplash
     const item = document.createElement("a");
@@ -65,7 +65,6 @@ async function getPhotos() {
   try {
     const response = await fetch(apiUrl);
     photosArray = await response.json();
-    console.log(photosArray);
     displayPhotos();
   } catch (error) {}
 }
