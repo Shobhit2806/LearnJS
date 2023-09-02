@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0px 5px 5px rgb(228, 228, 228);
+  height: 5vh;
+  position: relative;
+}
+#simple,#hex{
+  cursor: pointer;
+}
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 3vh;
+  padding: 2vh;
+  list-style: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  height: 95vh;
+}
+
+.bg-color-box {
+  background-color: black;
+  padding: 2vh 15vh;
+  color: white;
+}
+.click-btn {
+  border: 1px solid black;
+  background-color: transparent;
+  padding: 1vh 2vh;
+  border-radius: 1vh;
+  font-size: large;
+  box-shadow: 2px 2px 5px rgb(65, 65, 65);
+  cursor: pointer;
+  margin-top: 2vh;
+}
