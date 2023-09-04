@@ -18,7 +18,9 @@ clickBtn.addEventListener("click", function () {
   BgColor.innerText = randomColor;
   Content_Area.style.backgroundColor = randomColor;
 });
-
+console.log(Content_Area.innerHTML);
+console.log(Content_Area.innerText);
+console.log(Content_Area.textContent);
 hexBtn.addEventListener("click", function () {
   isHex = true;
   let randomColor = HexColArray[Math.floor(Math.random() * ColorArr.length)];

@@ -1,6 +1,64 @@
-.container{
-    display: flex;
-   background-color: red;
-    justify-content: center;
-    align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: F1F5F9;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content-card {
+  background-color: white;
+  box-shadow: 5px 5px 5px #b8b8b8;
+  padding: 10vh 15vh;
+}
+.category-title {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+}
+.input-container {
+  display: flex;
+  width: 80%;
+}
+.input-field {
+  padding: 0.5vh 2vh;
+  font-size: large;
+  width: 25vw;
+
+  border-radius: 1vh 0vh 0vh 1vh;
+  border: none;
+  background-color: aliceblue;
+}
+.submit-btn {
+  padding: 0.5vh 2vh;
+  font-size: large;
+  border: none;
+  border-radius: 0vh 1vh 1vh 0vh;
+  background-color: #a5d5f8;
+}
+.items-container{
+  display: flex;
+  flex-direction: column;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+  background-color: aliceblue;
+  padding: 0vh 1vh;
+  margin-top: 2vh;
+  border-radius: 1vh;
+}
+.item-title {
+  padding: 0.5vh;
+  margin: 0;
+ font-size: 24px;
+}
+.icons {
+  display: flex;
+  align-self: center;
+  width: 8vh;
+  justify-content: space-between;
 }
