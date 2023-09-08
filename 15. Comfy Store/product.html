@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comfy</title>
+    <title>Product</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,30 +14,28 @@
   <body>
     <nav class="navbar">
       <div class="nav-container">
-        <ul class="nav-items">
+        <ul class="nav-items nav-dark">
           <li class="nav-item">Home</li>
           <a href="products.html"> <li class="nav-item">Products</li></a>
           <li class="nav-item">About</li>
         </ul>
         <div class="logo">
-          <img src="./images/logo-white.svg" alt="logo" />
+          <img src="./images/logo-black.svg" alt="logo" />
         </div>
         <div class="nav-cart-icon">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </div>
       </div>
     </nav>
-    <div class="hero">
-      <section class="hero-mid-content">
-        <div class="hero-content">
-          <p>Rest, Relax, Unwind</p>
-          <p>Embrace your choices - we do</p>
-          <div>
-            <button class="hero-shop-btn">SHOW NOW</button>
-          </div>
-        </div>
-      </section>
-    </div>
-    <script type="module" src="main.js"></script>
+    <!-- hero -->
+    <section class="products-page-hero">
+      <div class="hero-mid-content">
+        <h3 class="page-hero-title">Home / Products</h3>
+      </div>
+    </section>
+    <!-- card -->
+    <div class="single-product-body"></div>
+
+    <script type="module" src="./src/pages/product.js"></script>
   </body>
 </html>
