@@ -1,0 +1,16 @@
+.bar {
+  background-color: grey;
+  height: 10px;
+  margin-top: 10px;
+}
+.content {
+  background-color: greenyellow;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 2000ms ease-in;
+}
+
+.fill {
+  transform: scaleX(1);
+}
