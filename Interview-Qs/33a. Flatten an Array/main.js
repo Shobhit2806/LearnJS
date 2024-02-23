@@ -15,6 +15,27 @@ const flattenArray = (arr) => {
   }, []);
 };
 
+const flattenArrayWithoutReduce = (arr)=>{
+  let results = [];
+  arr.forEach(element => {
+      if(Array.isArray(element)){
+        results = results.concat(flattenArrayWithoutReduce(element));
+      }
+      else{
+        results = results.concat(element);
+      }
+  });
+
+  return results;
+}
+
+console.log(
+  flattenArrayWithoutReduce([
+    [[1, [1.1]], 2, 3],
+    [4, 5],
+  ])
+);
+
 console.log(
   flattenArray([
     [[1, [1.1]], 2, 3],
