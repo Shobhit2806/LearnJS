@@ -1,0 +1,23 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search_box>input{
+    width: 30vw;
+    height: 4vh;
+}
+
+.suggestion-area{
+    background-color: aliceblue;
+    width: 30vw;
+    padding: 0;
+    display: none;
+}
+.suggestion-area>ul{
+    list-style: none;
+    padding-left: 1vw;
+}
+.suggestion-area>ul>li{
+    padding-top: 10px;
+}
