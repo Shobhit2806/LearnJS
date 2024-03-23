@@ -4,7 +4,7 @@ Function.prototype.myBind = function (context={},...args){
     }
     context.fn = this;
     return function(...newArgs){
-        return context.fn(...args,...newArgs)
+       context.fn(...args,...newArgs)
     }
 }
 const mobileObj = {
